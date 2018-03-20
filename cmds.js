@@ -83,14 +83,14 @@ exports.testCMD =(socket, rl, id)=> {
 		return makeQuestion(rl, quiz.question)
 		.then(respuesta => {
 			if ( respuesta.toLowerCase().trim() === quiz.answer.toLowerCase().trim()){
-
+				log(socket, "/\bcorrect/gim")
 				log(socket, 'CORRECTO');
 				log(socket, 'CORRECT');
 				log(socket, 'correct');
 				log(socket, 'correcto');
 				rl.prompt();
 			}else{
-
+				log(socket, "/\bincorrect/gim")
 				log(socket, 'INCORRECTO');
 				log(socket, 'INCORRECT');
 				log(socket, 'incorrect');
