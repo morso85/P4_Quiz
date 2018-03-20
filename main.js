@@ -16,7 +16,7 @@ log(socket,'CORE Quiz');
 const rl = readline.createInterface({
   input: socket,
   output: socket,
-  prompt: colorize('quiz> ', 'blue'),
+  prompt: 'quiz> ',
   completer:(line) => {
   const completions = 'h help add delete edit list test p play credits q quit'.split(' ');
   const hits = completions.filter((c) => c.startsWith(line));
@@ -86,8 +86,8 @@ rl
  
  
     default:
-      console.log(socket, `Comando desconocido:'${colorize(cmd, 'red')}'`);
-      console.log(socket, 'Use ' + colorize("help", "green") +' para ver todos los comandos disponibles. ')
+      console.log(socket, `Comando desconocido:'${cmd}'`);
+      console.log(socket, 'Use  "help"  para ver todos los comandos disponibles. ')
       rl.prompt();
       break;
   }
