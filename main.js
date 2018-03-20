@@ -64,6 +64,8 @@ rl
 		break;
 
 	case 'test':
+	console.log(args[0]);
+	console.log(args[1]);
 		cmds.testCMD(socket, rl, args[1]);
 		break;	
 
